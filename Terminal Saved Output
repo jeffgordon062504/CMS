@@ -1,0 +1,143 @@
+Last login: Tue Jun  7 11:47:11 on console
+MC908-C-6701-CP:~ student$ cd ~/Documents
+MC908-C-6701-CP:Documents student$ git
+xcode-select: note: no developer tools were found at '/Applications/Xcode.app', requesting install. Choose an option in the dialog to download the command line developer tools.
+MC908-C-6701-CP:Documents student$ git
+usage: git [--version] [--help] [-C <path>] [-c name=value]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Find by binary search the change that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Forward-port local commits to the updated upstream head
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+MC908-C-6701-CP:Documents student$ git clone https://github.com/jeffgordon062504/CMS.git
+Cloning into 'CMS'...
+warning: You appear to have cloned an empty repository.
+Checking connectivity... done.
+MC908-C-6701-CP:Documents student$ git clone https://github.com/jeffgordon062504/jeffgordon062504.github.io.git
+Cloning into 'jeffgordon062504.github.io'...
+warning: You appear to have cloned an empty repository.
+Checking connectivity... done.
+MC908-C-6701-CP:Documents student$ cd jeffg
+-bash: cd: jeffg: No such file or directory
+MC908-C-6701-CP:Documents student$ cd https://github.com/jeffgordon062504/jeffgordon062504.github.io.git
+MC908-C-6701-CP:Documents student$ cd jeffgordon062504.github.io.git
+-bash: cd: jeffgordon062504.github.io.git: No such file or directory
+MC908-C-6701-CP:Documents student$ git add --all
+fatal: Not a git repository (or any of the parent directories): .git
+MC908-C-6701-CP:Documents student$ cd jeffgordon062504.github.io/
+MC908-C-6701-CP:jeffgordon062504.github.io student$ ls
+index.html
+MC908-C-6701-CP:jeffgordon062504.github.io student$ git add --all
+MC908-C-6701-CP:jeffgordon062504.github.io student$ git init
+Reinitialized existing Git repository in /Users/student/Documents/jeffgordon062504.github.io/.git/
+MC908-C-6701-CP:jeffgordon062504.github.io student$ git commit -m "Initial Commit"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'student@MC908-C-6701-CP.(none)')
+MC908-C-6701-CP:jeffgordon062504.github.io student$ git config --global user.email "you@example.com"
+MC908-C-6701-CP:jeffgordon062504.github.io student$ git config --global user.email "you@example.com"
+MC908-C-6701-CP:jeffgordon062504.github.io student$ git config --global user.email "jeffgordon062504@gmail.com"
+MC908-C-6701-CP:jeffgordon062504.github.io student$ git config --global user.name "Jeff Gordon"
+MC908-C-6701-CP:jeffgordon062504.github.io student$ git commit -m "Initial Commit"
+[master (root-commit) 3a6c599] Initial Commit
+ 1 file changed, 12 insertions(+)
+ create mode 100644 index.html
+MC908-C-6701-CP:jeffgordon062504.github.io student$ git push -u origin master
+Username for 'https://github.com': jeffgordon062504
+Password for 'https://jeffgordon062504@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 355 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/jeffgordon062504/jeffgordon062504.github.io.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+MC908-C-6701-CP:jeffgordon062504.github.io student$ git push -u origin master
+Branch master set up to track remote branch master from origin.
+Everything up-to-date
+MC908-C-6701-CP:jeffgordon062504.github.io student$ git add --all
+MC908-C-6701-CP:jeffgordon062504.github.io student$ git commit -m "Initial Commit"
+[master 21fc6f4] Initial Commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+MC908-C-6701-CP:jeffgordon062504.github.io student$ git push -u origin master
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 285 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To https://github.com/jeffgordon062504/jeffgordon062504.github.io.git
+   3a6c599..21fc6f4  master -> master
+Branch master set up to track remote branch master from origin.
+MC908-C-6701-CP:jeffgordon062504.github.io student$ git add --all
+MC908-C-6701-CP:jeffgordon062504.github.io student$ git commit -m "Initial Commit"
+[master 28f3dc3] Initial Commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+MC908-C-6701-CP:jeffgordon062504.github.io student$ git push -u origin master
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 291 bytes | 0 bytes/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+To https://github.com/jeffgordon062504/jeffgordon062504.github.io.git
+   21fc6f4..28f3dc3  master -> master
+Branch master set up to track remote branch master from origin.
+MC908-C-6701-CP:jeffgordon062504.github.io student$ git add --all
+MC908-C-6701-CP:jeffgordon062504.github.io student$ git commit -m "Initial Commit"
+[master bbf7150] Initial Commit
+ 1 file changed, 16 insertions(+)
+MC908-C-6701-CP:jeffgordon062504.github.io student$ git push -u origin master
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 575 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/jeffgordon062504/jeffgordon062504.github.io.git
+   28f3dc3..bbf7150  master -> master
+Branch master set up to track remote branch master from origin.
+MC908-C-6701-CP:jeffgordon062504.github.io student$ 
